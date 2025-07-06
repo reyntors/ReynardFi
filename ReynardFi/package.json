@@ -1,0 +1,16 @@
+{
+    "name": "reynardfi",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "client": "npm start --prefix client",
+        "server": "npm start --prefix server",
+        "build": "npm run build --prefix client"
+    },
+    "dependencies": {
+        "nodemon": "^3.1.10",
+        "onoff": "^6.0.3",
+        "pigpio": "^3.3.1",
+        "recharts": "^3.0.2"
+    }
+}

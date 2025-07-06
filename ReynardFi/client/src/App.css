@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dashboard {
+  max-width: 480px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+.card {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.bandwidth h3,
+.status h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.chart-placeholder {
+  background: #333;
+  height: 100px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+.status-label {
+  text-align: center;
+  font-weight: bold;
+}
+
+.status-label .green {
+  color: #00ff88;
+}
+
+.status-label .red {
+  color: #ff5555;
+}
+
+.voucher-section {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.voucher-section input {
+  flex: 1;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.reserve {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.coin p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.coin select {
+  width: 100%;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background: #222;
+  color: #fff;
+  border: none;
+}
+
+.message {
+  text-align: center;
+  font-weight: bold;
+  color: #00ffcc;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn.connect {
+  background: #ffaa00;
+  color: #000;
+}
+
+.btn.voucher {
+  background: #6633ff;
+  color: #fff;
+}
+
+.btn.insert {
+  background: #ffaa00;
+  color: #000;
+}
+
+.btn.danger {
+  background: #ff3333;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.btn.alt {
+  background: #3333ff;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.logo-section {
+  position: relative;
+  display: inline-block;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 5px;
+  z-index: 0;
+}
+
+.logo-section img {
+  display: block;
+  border-radius: 10px;
+  height: 80px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Glowing border using ::before */
+.logo-section::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  border-radius: 12px;
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #1e00ff,
+    #00ffaa,
+    #00ff08
+  );
+  background-size: 300% 300%;
+  animation: animateGlow 1s linear infinite;
+  z-index: 0;
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
